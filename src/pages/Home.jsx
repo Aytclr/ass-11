@@ -26,6 +26,7 @@ useEffect(()=>{
 
 const deleteBilgi = async(id)=>{
   await axios.delete(`${url}${id}/`)
+  getBilgiler();
 }
 
   return (
