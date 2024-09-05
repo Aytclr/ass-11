@@ -29,9 +29,16 @@ const deleteBilgi = async(id)=>{
   getBilgiler();
 }
 
+const postBilgiler = async(yeniVeri)=>{
+  await axios.post(url, yeniVeri)
+  getBilgiler();
+}
+
+
+
   return (
     <div>
-      <AddBilgi/>
+      <AddBilgi postBilgiler={postBilgiler} />
       <BilgiList deleteBilgi={deleteBilgi} tutorials={tutorials}/>
     </div>
   )
