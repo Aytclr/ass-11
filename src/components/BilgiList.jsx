@@ -23,11 +23,11 @@ const BilgiList = ({tutorials, deleteBilgi, putBilgi}) => {
           </tr>
         </thead>
         <tbody>
-          {tutorials.map(({id,title,descrition}) => (
+          {tutorials.map(({id, title, description}) => (
             <tr>
               <th>{id}</th>
               <td>{title}</td>
-              <td>{descrition}</td>
+              <td>{description}</td>
               <td className="text-center ">
                 <AiFillDelete
                   type="button"
@@ -42,7 +42,7 @@ const BilgiList = ({tutorials, deleteBilgi, putBilgi}) => {
                   size={20}
                   type="button"
                   className="me-2 text-warning cursor-pointer"
-                  onClick={()=>setEditItem({id,title,descrition})}
+                  onClick={()=>setEditItem({id,title,description})}
                 />
               </td>
             </tr>

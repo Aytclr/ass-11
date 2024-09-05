@@ -35,7 +35,8 @@ const postBilgiler = async(yeniVeri)=>{
 }
 
 const putBilgi = async(editItem)=>{
-  await axios.put(`${url}${editItem.id}`)
+  await axios.put(`${url}${editItem.id}/`,editItem)
+  getBilgiler();
 }
 
 
