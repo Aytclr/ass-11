@@ -4,8 +4,8 @@ import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 import EditBilgi from "./EditBilgi";
 
-const BilgiList = () => {
-
+const BilgiList = ({tutorials}) => {
+console.log(tutorials);
   return (
     <div className="container mt-4">
       <table className="table table-striped">
@@ -20,7 +20,9 @@ const BilgiList = () => {
           </tr>
         </thead>
         <tbody>
-        
+        {
+          
+        }
               <tr >
                 <th>{}</th>
                 <td>{}</td>
