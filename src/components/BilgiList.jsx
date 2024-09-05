@@ -4,8 +4,9 @@ import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 import EditBilgi from "./EditBilgi";
 
-const BilgiList = ({tutorials}) => {
-console.log(tutorials);
+const BilgiList = ({tutorials, deleteBilgi}) => {
+
+
   return (
     <div className="container mt-4">
       <table className="table table-striped">
@@ -20,35 +21,31 @@ console.log(tutorials);
           </tr>
         </thead>
         <tbody>
-        {
-          
-        }
-              <tr >
-                <th>{}</th>
-                <td>{}</td>
-                <td>{}</td>
-                <td className="text-center ">
-                  <AiFillDelete
-                    type="button"
-                    size={22}
-                    className="text-danger cursor-pointer"
-                 />
+          {tutorials.map(({id,title,descrition}) => (
+            <tr>
+              <th>{id}</th>
+              <td>{title}</td>
+              <td>{descrition}</td>
+              <td className="text-center ">
+                <AiFillDelete
+                  type="button"
+                  size={22}
+                  className="text-danger cursor-pointer"
+                />
 
-                  <FaEdit
-                    data-bs-toggle="modal"
-                    data-bs-target="#editModal"
-                    size={20}
-                    type="button"
-                    className="me-2 text-warning cursor-pointer"
-                
-                  />
-                </td>
-              </tr>
-        
-
+                <FaEdit
+                  data-bs-toggle="modal"
+                  data-bs-target="#editModal"
+                  size={20}
+                  type="button"
+                  className="me-2 text-warning cursor-pointer"
+                />
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
-     <EditBilgi />
+      <EditBilgi />
     </div>
   );
 };

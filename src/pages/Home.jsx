@@ -24,12 +24,14 @@ useEffect(()=>{
   getBilgiler();
 },[])
 
-
+const deleteBilgi = async(id)=>{
+  await axios.delete(`${url}${id}/`)
+}
 
   return (
     <div>
       <AddBilgi/>
-      <BilgiList tutorials={tutorials}/>
+      <BilgiList deleteBilgi={deleteBilgi} tutorials={tutorials}/>
     </div>
   )
 }
