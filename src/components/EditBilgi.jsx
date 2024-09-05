@@ -1,5 +1,5 @@
 import React from "react";
-const EditBilgi = () => {
+const EditBilgi = ({editItem,setEditItem}) => {
 
 
   return (
@@ -34,6 +34,8 @@ const EditBilgi = () => {
                 id="title"
                 placeholder="Enter your title"
               
+                value={editItem.title}
+                onChange={(e)=>setEditItem({...editItem, title:e.target.value})}
               />
             </div>
             <div className="mb-3">
@@ -45,7 +47,8 @@ const EditBilgi = () => {
                 className="form-control"
                 id="desc"
                 placeholder="Enter your Description"
-            
+                value={editItem.descrition}
+                onChange={(e)=>setEditItem({...editItem, descrition:e.target.value})}
               />
             </div>
           </div>

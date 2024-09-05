@@ -34,12 +34,15 @@ const postBilgiler = async(yeniVeri)=>{
   getBilgiler();
 }
 
+const putBilgi = async()=>{
+  await axios.put(url)
+}
 
 
   return (
     <div>
       <AddBilgi postBilgiler={postBilgiler} />
-      <BilgiList deleteBilgi={deleteBilgi} tutorials={tutorials}/>
+      <BilgiList deleteBilgi={deleteBilgi} tutorials={tutorials} putBilgi={putBilgi}/>
     </div>
   )
 }
