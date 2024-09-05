@@ -1,5 +1,5 @@
 import React from "react";
-const EditBilgi = ({editItem,setEditItem}) => {
+const EditBilgi = ({editItem,setEditItem,putBilgi}) => {
 
 
   return (
@@ -57,6 +57,7 @@ const EditBilgi = ({editItem,setEditItem}) => {
               type="button"
               className="btn btn-secondary"
               data-bs-dismiss="modal"
+              onClick={()=>putBilgi(editItem)}
           
             >
               Save
