@@ -24,7 +24,7 @@ const BilgiList = ({tutorials, deleteBilgi, putBilgi}) => {
         </thead>
         <tbody>
           {tutorials.map(({id, title, description}) => (
-            <tr>
+            <tr key={id}>
               <th>{id}</th>
               <td>{title}</td>
               <td>{description}</td>
